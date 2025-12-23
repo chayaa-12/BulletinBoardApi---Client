@@ -1,0 +1,22 @@
+<div class="toolbar">
+  <input
+    type="text"
+    placeholder="חיפוש מודעה..."
+    [(ngModel)]="searchText"
+    (input)="filterAds()"
+  />
+
+  <button (click)="openDialog()">➕ הוספת מודעה</button>
+</div>
+
+<div class="ads-container">
+  <div class="ad-card" *ngFor="let ad of filteredAds">
+    <h3 class="ad-title">{{ ad.title }}</h3>
+    <img *ngIf="ad.imageBase64" [src]="ad.imageBase64" style="max-width: 150px;" />
+    <p class="ad-description">{{ ad.description }}</p>
+    <div class="ad-actions">
+      <button (click)="openDialog(ad)">עריכה</button>
+      <button (click)="deleteAd(ad.id!)">מחיקה</button>
+    </div>
+  </div>
+</div>

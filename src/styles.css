@@ -1,1 +1,64 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  direction: rtl;
+  text-align: right;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.centered-dialog {
+  transform: translate(-50%, -50%);
+}
+
+.center-dialog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* סגנונות כלליים לדיאלוג */
+.mat-dialog-container {
+  background: white !important;
+  border-radius: 15px !important;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12) !important;
+  padding: 0 !important;
+}
+
+.center-dialog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mat-dialog-content {
+  padding: 0 !important;
+  margin: 0 !important;
+  max-height: none !important;
+}
+
+/* רקע הדיאלוג */
+.cdk-overlay-backdrop {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+/* סגנונות כלליים לכפתורים */
+button {
+  font-family: inherit;
+}
+
+/* סגנונות כלליים לשדות קלט */
+input, textarea {
+  font-family: inherit;
+}
