@@ -25,7 +25,4 @@ export class AdsService {
     return this.http.delete(`${this.apiUrl}/${id}`);
   }
 
-  add(ad: Ad) {
-  return this.http.post<Ad>(this.apiUrl, ad);
-}
 }

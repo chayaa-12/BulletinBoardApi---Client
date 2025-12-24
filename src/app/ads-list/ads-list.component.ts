@@ -3,7 +3,6 @@ import { Ad } from '../../../src/models/ad';
 import { AdsService } from '../services/ads.service';
 import { EditAdDialogComponent } from '../edit-ad-dialog/edit-ad-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
-import { AdFormComponent } from '../ad-form/ad-form.component';
 
 @Component({
   selector: 'app-ads-list',
@@ -52,11 +51,12 @@ export class AdsListComponent implements OnInit {
    }
     const dialogRef = this.dialog.open(EditAdDialogComponent, {
       direction: 'rtl',
-      width: '450px',
+      width: '500px',
       maxWidth: '90vw',
       maxHeight: '90vh',
-      panelClass: 'center-dialog',
+      panelClass: 'custom-dialog-container',
       hasBackdrop: true,
+      backdropClass: 'custom-backdrop',
       disableClose: false,
       autoFocus: true,
       data: adToEdit ?? null

@@ -22,35 +22,51 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.center-dialog {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 /* סגנונות כלליים לדיאלוג */
 .mat-dialog-container {
   background: white !important;
   border-radius: 15px !important;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.12) !important;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2) !important;
   padding: 0 !important;
+  margin: 0 !important;
+  overflow: visible !important;
 }
 
-.center-dialog {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* מיקום הדיאלוג */
+.custom-dialog-container .mat-dialog-container {
+  position: relative !important;
+  transform: none !important;
+}
+
+.cdk-overlay-pane {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  z-index: 1000 !important;
 }
 
 .mat-dialog-content {
   padding: 0 !important;
   margin: 0 !important;
   max-height: none !important;
+  overflow: visible !important;
+}
+
+.mat-dialog-actions {
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 /* רקע הדיאלוג */
 .cdk-overlay-backdrop {
-  background-color: rgba(0, 0, 0, 0.5) !important;
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  backdrop-filter: blur(2px) !important;
+}
+
+.custom-backdrop {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  backdrop-filter: blur(2px) !important;
 }
 
 /* סגנונות כלליים לכפתורים */
